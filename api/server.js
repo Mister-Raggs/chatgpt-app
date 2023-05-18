@@ -39,8 +39,8 @@ app.post("/", async (req, res) => {
         });
     } catch (error) {
         console.log("FAILED:", req.body.input);
-        console.error(error);
-        res.status(500).send(error);
+        console.error(error.response);
+        res.status(500).send(error.response);
     }
 });
 
